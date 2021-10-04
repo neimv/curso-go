@@ -9,6 +9,8 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: gocurso
+    volumes:
+      - mongo-db-volume:/data/db
 
   mongo-express:
     image: mongo-express
@@ -19,3 +21,6 @@ services:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: gocurso
       ME_CONFIG_MONGODB_URL: mongodb://root:gocurso@mongo:27017/
+
+volumes:
+  mongo-db-volume:
