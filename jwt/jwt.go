@@ -13,7 +13,7 @@ func GeneroJWT(t models.Usuario) (string, error) {
 		"email":            t.Email,
 		"nombre":           t.Nombre,
 		"apellidos":        t.Apellidos,
-		"fecha_nacimiento": t.FechaNecimiento,
+		"fecha_nacimiento": t.FechaNacimiento,
 		"biografia":        t.Biografia,
 		"ubicacion":        t.Ubicacion,
 		"sitioweb":         t.SitioWeb,
