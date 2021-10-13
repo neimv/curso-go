@@ -1,0 +1,568 @@
+{
+	"info": {
+		"_postman_id": "eb3cb5f8-e23c-4417-9622-e7001fd177f3",
+		"name": "Go-Curso",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"neimv@hola.com\",\n    \"password\": \"12345678\",\n    \"nombre\": \"Pedrito\",\n    \"apellidos\": \"por que no\",\n    \"fechaNacimiento\": \"1970-06-30T00:00:00Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/registro",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"registro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BearereyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTViMGY4YjIzMjJkYzU5OWU4ZjdjNzYiLCJhcGVsbGlkb3MiOiJ6YXRhcmEgbHlyYSIsImJpb2dyYWZpYSI6ImVsIGV0ZXJubyB2YWdvIiwiZW1haWwiOiJuZWltdkBob2wuY29tIiwiZXhwIjoxNjM0MjE4NzYwLCJmZWNoYV9uYWNpbWllbnRvIjoiMDAwMS0wMS0wMVQwMDowMDowMFoiLCJub21icmUiOiJuZWltdiIsInNpdGlvd2ViIjoiZW4gcHJvY2VzbyIsInViaWNhY2lvbiI6Ik5lc2JpdCJ9.48FoQZj2IsGMw_vsSJOkyBq6NwtmCjIdHJAHkcPhunI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"neimv@hola.com\",\n    \"password\": \"12345678\",\n    \"nombre\": \"Pedrito\",\n    \"apellidos\": \"por que no\",\n    \"fechaNacimiento\": \"1970-06-30T00:00:00Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8088/listausuarios?page=1&type=follow",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"listausuarios"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "type",
+							"value": "follow"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "followers tweets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BearereyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTViMGY4YjIzMjJkYzU5OWU4ZjdjNzYiLCJhcGVsbGlkb3MiOiJ6YXRhcmEgbHlyYSIsImJpb2dyYWZpYSI6ImVsIGV0ZXJubyB2YWdvIiwiZW1haWwiOiJuZWltdkBob2wuY29tIiwiZXhwIjoxNjM0MjE4NzYwLCJmZWNoYV9uYWNpbWllbnRvIjoiMDAwMS0wMS0wMVQwMDowMDowMFoiLCJub21icmUiOiJuZWltdiIsInNpdGlvd2ViIjoiZW4gcHJvY2VzbyIsInViaWNhY2lvbiI6Ik5lc2JpdCJ9.48FoQZj2IsGMw_vsSJOkyBq6NwtmCjIdHJAHkcPhunI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"neimv@hola.com\",\n    \"password\": \"12345678\",\n    \"nombre\": \"Pedrito\",\n    \"apellidos\": \"por que no\",\n    \"fechaNacimiento\": \"1970-06-30T00:00:00Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8088/listausuarios?page=1&type=follow",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"listausuarios"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "type",
+							"value": "follow"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create relation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BearereyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTViMGY4YjIzMjJkYzU5OWU4ZjdjNzYiLCJhcGVsbGlkb3MiOiJ6YXRhcmEgbHlyYSIsImJpb2dyYWZpYSI6ImVsIGV0ZXJubyB2YWdvIiwiZW1haWwiOiJuZWltdkBob2wuY29tIiwiZXhwIjoxNjMzOTc5MjE5LCJmZWNoYV9uYWNpbWllbnRvIjoiMTk4OC0wNi0yMVQwMDowNTowMFoiLCJub21icmUiOiJuZWltdiIsInNpdGlvd2ViIjoiZW4gcHJvY2VzbyIsInViaWNhY2lvbiI6Ik5lc2JpdCJ9.8Rp6Nv8Aj4i-z94fggGNoLDRBhSAms0TuTLSWoX1Q44",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/altarelacion?id=616351d08cfa89d358375b47",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"altarelacion"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "616351d08cfa89d358375b47"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"neimv@hol.com\",\n    \"password\": \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8088/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save tweet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BearereyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTViMGY4YjIzMjJkYzU5OWU4ZjdjNzYiLCJhcGVsbGlkb3MiOiJ6YXRhcmEgbHlyYSIsImJpb2dyYWZpYSI6ImVsIGV0ZXJubyB2YWdvIiwiZW1haWwiOiJuZWltdkBob2wuY29tIiwiZXhwIjoxNjMzNTMzMTI5LCJmZWNoYV9uYWNpbWllbnRvIjoiMTk4OC0wNi0yMVQwMDowNTowMFoiLCJub21icmUiOiJuZWltdiIsInNpdGlvd2ViIjoiZW4gcHJvY2VzbyIsInViaWNhY2lvbiI6Ik5lc2JpdCJ9.Wdp4OXZu4aaEqB3Q5N_0VAU76DkVnlGIzbKen65n5nk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mensaje\": \"hello world!!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/tweet",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tweet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete tweet",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BearereyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTViMGY4YjIzMjJkYzU5OWU4ZjdjNzYiLCJhcGVsbGlkb3MiOiJ6YXRhcmEgbHlyYSIsImJpb2dyYWZpYSI6ImVsIGV0ZXJubyB2YWdvIiwiZW1haWwiOiJuZWltdkBob2wuY29tIiwiZXhwIjoxNjMzOTc5MjE5LCJmZWNoYV9uYWNpbWllbnRvIjoiMTk4OC0wNi0yMVQwMDowNTowMFoiLCJub21icmUiOiJuZWltdiIsInNpdGlvd2ViIjoiZW4gcHJvY2VzbyIsInViaWNhY2lvbiI6Ik5lc2JpdCJ9.8Rp6Nv8Aj4i-z94fggGNoLDRBhSAms0TuTLSWoX1Q44",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mensaje\": \"hello world!!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/borrotweet?id=615c6bf54dad4bfc0b782b54",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"borrotweet"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "615c6bf54dad4bfc0b782b54"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Relation",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BearereyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTViMGY4YjIzMjJkYzU5OWU4ZjdjNzYiLCJhcGVsbGlkb3MiOiJ6YXRhcmEgbHlyYSIsImJpb2dyYWZpYSI6ImVsIGV0ZXJubyB2YWdvIiwiZW1haWwiOiJuZWltdkBob2wuY29tIiwiZXhwIjoxNjMzOTc5MjE5LCJmZWNoYV9uYWNpbWllbnRvIjoiMTk4OC0wNi0yMVQwMDowNTowMFoiLCJub21icmUiOiJuZWltdiIsInNpdGlvd2ViIjoiZW4gcHJvY2VzbyIsInViaWNhY2lvbiI6Ik5lc2JpdCJ9.8Rp6Nv8Aj4i-z94fggGNoLDRBhSAms0TuTLSWoX1Q44",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mensaje\": \"hello world!!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/bajatrelacion?id=615c6bf54dad4bfc0b782b54",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bajatrelacion"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "615c6bf54dad4bfc0b782b54"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Relation",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BearereyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTViMGY4YjIzMjJkYzU5OWU4ZjdjNzYiLCJhcGVsbGlkb3MiOiJ6YXRhcmEgbHlyYSIsImJpb2dyYWZpYSI6ImVsIGV0ZXJubyB2YWdvIiwiZW1haWwiOiJuZWltdkBob2wuY29tIiwiZXhwIjoxNjMzOTc5MjE5LCJmZWNoYV9uYWNpbWllbnRvIjoiMTk4OC0wNi0yMVQwMDowNTowMFoiLCJub21icmUiOiJuZWltdiIsInNpdGlvd2ViIjoiZW4gcHJvY2VzbyIsInViaWNhY2lvbiI6Ik5lc2JpdCJ9.8Rp6Nv8Aj4i-z94fggGNoLDRBhSAms0TuTLSWoX1Q44",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mensaje\": \"hello world!!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8088/consultarelacion?id=616351d08cfa89d358375b47",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"consultarelacion"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "616351d08cfa89d358375b47"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit avatar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BearereyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTViMGY4YjIzMjJkYzU5OWU4ZjdjNzYiLCJhcGVsbGlkb3MiOiJ6YXRhcmEgbHlyYSIsImJpb2dyYWZpYSI6ImVsIGV0ZXJubyB2YWdvIiwiZW1haWwiOiJuZWltdkBob2wuY29tIiwiZXhwIjoxNjMzOTc5MjE5LCJmZWNoYV9uYWNpbWllbnRvIjoiMTk4OC0wNi0yMVQwMDowNTowMFoiLCJub21icmUiOiJuZWltdiIsInNpdGlvd2ViIjoiZW4gcHJvY2VzbyIsInViaWNhY2lvbiI6Ik5lc2JpdCJ9.8Rp6Nv8Aj4i-z94fggGNoLDRBhSAms0TuTLSWoX1Q44",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/home/neimv/Pictures/Triunfante_Wendy.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/subiravatar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subiravatar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit banner",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BearereyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTViMGY4YjIzMjJkYzU5OWU4ZjdjNzYiLCJhcGVsbGlkb3MiOiJ6YXRhcmEgbHlyYSIsImJpb2dyYWZpYSI6ImVsIGV0ZXJubyB2YWdvIiwiZW1haWwiOiJuZWltdkBob2wuY29tIiwiZXhwIjoxNjMzOTc5MjE5LCJmZWNoYV9uYWNpbWllbnRvIjoiMTk4OC0wNi0yMVQwMDowNTowMFoiLCJub21icmUiOiJuZWltdiIsInNpdGlvd2ViIjoiZW4gcHJvY2VzbyIsInViaWNhY2lvbiI6Ik5lc2JpdCJ9.8Rp6Nv8Aj4i-z94fggGNoLDRBhSAms0TuTLSWoX1Q44",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "banner",
+							"type": "file",
+							"src": "/home/neimv/Pictures/Triunfante_Wendy.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/subirbanner",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subirbanner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get avatar",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BearereyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTViMGY4YjIzMjJkYzU5OWU4ZjdjNzYiLCJhcGVsbGlkb3MiOiJ6YXRhcmEgbHlyYSIsImJpb2dyYWZpYSI6ImVsIGV0ZXJubyB2YWdvIiwiZW1haWwiOiJuZWltdkBob2wuY29tIiwiZXhwIjoxNjMzOTc5MjE5LCJmZWNoYV9uYWNpbWllbnRvIjoiMTk4OC0wNi0yMVQwMDowNTowMFoiLCJub21icmUiOiJuZWltdiIsInNpdGlvd2ViIjoiZW4gcHJvY2VzbyIsInViaWNhY2lvbiI6Ik5lc2JpdCJ9.8Rp6Nv8Aj4i-z94fggGNoLDRBhSAms0TuTLSWoX1Q44",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/obteneravatar?id=615b0f8b2322dc599e8f7c76",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"obteneravatar"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "615b0f8b2322dc599e8f7c76"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get banner",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BearereyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTViMGY4YjIzMjJkYzU5OWU4ZjdjNzYiLCJhcGVsbGlkb3MiOiJ6YXRhcmEgbHlyYSIsImJpb2dyYWZpYSI6ImVsIGV0ZXJubyB2YWdvIiwiZW1haWwiOiJuZWltdkBob2wuY29tIiwiZXhwIjoxNjMzOTc5MjE5LCJmZWNoYV9uYWNpbWllbnRvIjoiMTk4OC0wNi0yMVQwMDowNTowMFoiLCJub21icmUiOiJuZWltdiIsInNpdGlvd2ViIjoiZW4gcHJvY2VzbyIsInViaWNhY2lvbiI6Ik5lc2JpdCJ9.8Rp6Nv8Aj4i-z94fggGNoLDRBhSAms0TuTLSWoX1Q44",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/obtenerbanner?id=615b0f8b2322dc599e8f7c76",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"obtenerbanner"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "615b0f8b2322dc599e8f7c76"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "see perfil",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BearereyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTViMGY4YjIzMjJkYzU5OWU4ZjdjNzYiLCJhcGVsbGlkb3MiOiJ6YXRhcmEgbHlyYSIsImJpb2dyYWZpYSI6ImVsIGV0ZXJubyB2YWdvIiwiZW1haWwiOiJuZWltdkBob2wuY29tIiwiZXhwIjoxNjMzNTMzMTI5LCJmZWNoYV9uYWNpbWllbnRvIjoiMTk4OC0wNi0yMVQwMDowNTowMFoiLCJub21icmUiOiJuZWltdiIsInNpdGlvd2ViIjoiZW4gcHJvY2VzbyIsInViaWNhY2lvbiI6Ik5lc2JpdCJ9.Wdp4OXZu4aaEqB3Q5N_0VAU76DkVnlGIzbKen65n5nk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/verperfil?id=615b0f8b2322dc599e8f7c76",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"verperfil"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "615b0f8b2322dc599e8f7c76"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read tweets",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BearereyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTViMGY4YjIzMjJkYzU5OWU4ZjdjNzYiLCJhcGVsbGlkb3MiOiJ6YXRhcmEgbHlyYSIsImJpb2dyYWZpYSI6ImVsIGV0ZXJubyB2YWdvIiwiZW1haWwiOiJuZWltdkBob2wuY29tIiwiZXhwIjoxNjMzOTc5MjE5LCJmZWNoYV9uYWNpbWllbnRvIjoiMTk4OC0wNi0yMVQwMDowNTowMFoiLCJub21icmUiOiJuZWltdiIsInNpdGlvd2ViIjoiZW4gcHJvY2VzbyIsInViaWNhY2lvbiI6Ik5lc2JpdCJ9.8Rp6Nv8Aj4i-z94fggGNoLDRBhSAms0TuTLSWoX1Q44",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/verperfil?id=615b0f8b2322dc599e8f7c76",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"verperfil"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "615b0f8b2322dc599e8f7c76"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modify perfil",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "BearereyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTViMGY4YjIzMjJkYzU5OWU4ZjdjNzYiLCJhcGVsbGlkb3MiOiJwb3IgcXVlIG5vIiwiYmlvZ3JhZmlhIjoiIiwiZW1haWwiOiJuZWltdkBob2wuY29tIiwiZXhwIjoxNjMzNDQ0MTExLCJmZWNoYV9uYWNpbWllbnRvIjoiMTk3MC0wNi0zMFQwMDowMDowMFoiLCJub21icmUiOiJQZWRyaXRvIiwic2l0aW93ZWIiOiIiLCJ1YmljYWNpb24iOiIifQ.IPxT0aL5yz1DKt5yvg-3thfjgvlwJpTztme4qiQOoJk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"neimv\",\n    \"apellidos\": \"zatara lyra\",\n    \"fechaNacimiento\": \"1988-06-21T00:05:00Z\",\n    \"banner\": \"\",\n    \"ubicacion\": \"Nesbit\",\n    \"biografia\": \"el eterno vago\",\n    \"sitioWeb\": \"en proceso\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/modificarperfil",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modificarperfil"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
